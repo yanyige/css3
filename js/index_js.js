@@ -17,8 +17,8 @@ $(document).ready(function(){
 
     jQuery.imqq = function(){
         $(window).scroll(function(){
-            console.log(document.all.content2.offsetWidth);
-            console.log($("#eg7_wrap").offset().top);
+            //console.log(document.all.content2.offsetWidth);
+            //console.log($("#eg7_wrap").offset().top);
             var t1 =  $("#eg7_wrap").offset().top - $(window).scrollTop();
             t1 = t1 * 0.03;
             var pos = "50% "+t1+"px";
@@ -33,7 +33,19 @@ $(document).ready(function(){
             $(".eg7_bg3").css({"background-position":pos});
         });
     }
-
     $.imqq();
+
+    jQuery.elippsetext = function(textdiv){
+        var divheight = $(textdiv).outerHeight();
+        var $p = $("p" , $(textdiv)).eq(0);
+        var textheight = $("p" , $(textdiv)).eq(0).height();
+        //console.log(divheight + " haha " + textheight);
+       while(divheight<textheight){
+           $p.text($p.text().replace(/([a-zA-Z0-9]+|[\W])(\.\.\.)*$/ , "..."));
+            textheight = $p.outerHeight();
+            console.log(textheight);
+        }
+    }
+    $.elippsetext("#eg5_content2");
 });
 

@@ -11,7 +11,7 @@ P{
     float: left;
 }
 
-#wrap{position:relative}
+#wrap{position:relative }
 
 #eg1_block1{
     height:50px;
@@ -135,7 +135,14 @@ P{
     word-break: break-all;
 
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; //显示的行数
+    -webkit-line-clamp: 2; /*显示的行数*/
+}
+
+#eg5_content2{
+    margin:10px 0px;
+    border: 1px solid;
+    height:40px;
+    width:300px;
 }
 
 #eg6{
@@ -170,6 +177,7 @@ P{
 
 #eg6:hover{
     right: 0px;
+    cursor: Pointer;
 }
 
 .eg7_bg1{
@@ -197,4 +205,42 @@ P{
     background-size: cover;
     background-image: url(../image/bg3_1600.jpg);
     background-attachment: fixed;
+}
+
+#eg9_wrap{
+    display: flex;
+    flex-direction:row;
+
+}
+
+#eg9_wrap2{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+
+div[class^="eg9_box"]{
+    height:50px;
+    width :50px;
+    background-color: aquamarine;
+    margin: 10px 10px;
+}
+
+#box1{
+    flex-grow:2;
+}
+#box2{
+    flex-grow:2;
+}
+#box3{
+    flex-grow:2;
+}
+#box4{
+    flex-grow:2;
+}
+#box5{
+    flex-grow:2;
+}
+#box6{
+    flex-grow:1;
 }
