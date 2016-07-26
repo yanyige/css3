@@ -288,3 +288,15 @@ div[class^="eg9_box"]{
 #box6{
     flex-grow:1;
 }
+
+#eg11_wrap{
+    display: table-cell;
+    height: 200px;
+    width: 800px;
+    background-color: red;
+    vertical-align: middle;
+}
+
+.vertileCenter{
+    vertical-align: middle;
+}
