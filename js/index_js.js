@@ -23,17 +23,17 @@ $(document).ready(function(){
             t1 = t1 * 0.1;
             var posX = "50%";
             var posY = t1+"px";
-            $(".eg7_bg1").animate({"background-positionx":posX, "background-position-y":posY}, 200);
+            $(".eg7_bg1").animate({"background-positionx":posX, "background-position-y":posY}, 200, 'easeOutQuint');
             var t2 = $("#content2").offset().top - $(window).scrollTop();
             t2 = t2 * 0.1;
             var posX = "50%";
             var posY = t2+"px";
-            $(".eg7_bg2").animate({"background-positionx":posX, "background-position-y":posY}, 200);
+            $(".eg7_bg2").animate({"background-positionx":posX, "background-position-y":posY}, 200, 'easeOutQuint');
             var t3 = $("#content3").offset().top - $(window).scrollTop();
             t3 = t3 * 0.1;
             var posX = "50%";
             var posY = t3+"px";
-            $(".eg7_bg3").animate({"background-positionx":posX, "background-position-y":posY}, 200);
+            $(".eg7_bg3").animate({"background-positionx":posX, "background-position-y":posY}, 200, 'easeOutQuint');
         });
         $('#eg7_wrap').mousemove(function(ev){
             var event = ev || window.event;
