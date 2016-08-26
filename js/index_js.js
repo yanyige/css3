@@ -20,17 +20,31 @@ $(document).ready(function(){
             //console.log(document.all.content2.offsetWidth);
             //console.log($("#eg7_wrap").offset().top);
             var t1 =  $("#eg7_wrap").offset().top - $(window).scrollTop();
-            t1 = t1 * 0.03;
-            var pos = "50% "+t1+"px";
-            $(".eg7_bg1").css({"background-position":pos});
+            t1 = t1 * 0.1;
+            var posX = "50%";
+            var posY = t1+"px";
+            $(".eg7_bg1").animate({"background-positionx":posX, "background-position-y":posY}, 100, 'linear');
             var t2 = $("#content2").offset().top - $(window).scrollTop();
-            t2 = t2 * 0.03;
-            var pos = "50% "+t2+"px";
-            $(".eg7_bg2").css({"background-position":pos});
+            t2 = t2 * 0.1;
+            var posX = "50%";
+            var posY = t2+"px";
+            $(".eg7_bg2").css({"background-positionx":posX, "background-position-y":posY}, 10000, 'linear');
             var t3 = $("#content3").offset().top - $(window).scrollTop();
-            t3 = t3 * 0.03;
-            var pos = "50% "+t3+"px";
-            $(".eg7_bg3").css({"background-position":pos});
+            t3 = t3 * 0.1;
+            var posX = "50%";
+            var posY = t3+"px";
+            $(".eg7_bg3").css({"background-positionx":posX, "background-position-y":posY}, 10000, 'linear');
+        });
+        $('#eg7_wrap').mousemove(function(ev){
+            var event = ev || window.event;
+            //get the pos of the dom
+            var pageX = event.pageX;
+            var pageY = event.clientY;
+            var posX = pageX * 0.009;
+            var posY = pageY * 0.009;
+            var ret = 'translate3D(' + posX + 'px, ' + posY + 'px, 0px)';
+            console.log(ret);
+            $('.eg7-cloud').css('transform', ret);
         });
     }
     $.imqq();
