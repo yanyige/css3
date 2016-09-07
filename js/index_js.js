@@ -35,7 +35,7 @@ $(document).ready(function(){
             var posY = t3+"px";
             $(".eg7_bg3").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
         });
-        $('#eg7_wrap').mousemove(function(ev){
+        $('#eg13').mousemove(function(ev){
             var event = ev || window.event;
             //get the pos of the dom
             var pageX = event.pageX;
@@ -43,7 +43,6 @@ $(document).ready(function(){
             var posX = pageX * 0.009;
             var posY = pageY * 0.009;
             var ret = 'translate3D(' + posX + 'px, ' + posY + 'px, 0px)';
-            console.log(ret);
             $('.eg7-cloud').css('transform', ret);
         });
     }
@@ -132,7 +131,7 @@ $(document).ready(function(){
                 drawCricle(context, circleArr[i].x, circleArr[i].y, circleArr[i].r);
             }
             for (var i = 0; i < POINT; i++) {
-                for (var j = 0; j < POINT; j++) {
+                for (var j = i; j < i + 10; j++) {
                     if (i + j < POINT) {
                         var A = Math.abs(circleArr[i+j].x - circleArr[i].x),
                             B = Math.abs(circleArr[i+j].y - circleArr[i].y);
